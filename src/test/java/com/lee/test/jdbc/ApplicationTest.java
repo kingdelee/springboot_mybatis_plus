@@ -10,7 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.zhongcheng.oa.OaApplication;
+import com.zhongcheng.oa.entity.AdvertiserInfo;
 import com.zhongcheng.oa.entity.Worker;
+import com.zhongcheng.oa.service.AdvertiserInfoService;
 import com.zhongcheng.oa.service.WorkerService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -25,11 +27,20 @@ public class ApplicationTest {
     @Autowired
     private WorkerService workerService;
 
+    @Autowired
+    private AdvertiserInfoService advertiserInfoService;
+
 
     @Test
     public void t1(){
         List<Worker> workers = workerService.getBaseMapper().selectList(null);
         log.info(workers.toString());
+    }
+
+    @Test
+    public void t2(){
+        List<AdvertiserInfo> advertiserInfos = advertiserInfoService.getBaseMapper().selectList(null);
+        log.info(advertiserInfos.toString());
     }
 
 }
