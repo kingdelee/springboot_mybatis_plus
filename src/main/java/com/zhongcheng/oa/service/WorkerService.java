@@ -1,5 +1,6 @@
 package com.zhongcheng.oa.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.zhongcheng.oa.common.service.SuperService;
 import com.zhongcheng.oa.entity.Worker;
 
@@ -11,6 +12,6 @@ import com.zhongcheng.oa.entity.Worker;
  * @Modified By: Who(When)
  * @Version v1.0
  **/
-public interface WorkerService<Worker> extends SuperService<Worker> {
+public interface WorkerService extends IService<Worker> {
 
 }

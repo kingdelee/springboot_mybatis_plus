@@ -1,6 +1,8 @@
 package com.zhongcheng.oa.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zhongcheng.oa.common.dao.SuperMapper;
+import com.zhongcheng.oa.entity.Worker;
 
 /**
  * @Title: WorkerMapper
@@ -10,6 +12,6 @@ import com.zhongcheng.oa.common.dao.SuperMapper;
  * @Modified By: Who(When)
  * @Version v1.0
  **/
-public interface WorkerMapper<T> extends SuperMapper<T> {
+public interface WorkerMapper extends BaseMapper<Worker> {
 
 }

@@ -23,7 +23,7 @@ public class ApplicationTest {
     private Random random = new Random();
 
     @Autowired
-    private WorkerService<Worker> workerService;
+    private WorkerService workerService;
 
 
     @Test

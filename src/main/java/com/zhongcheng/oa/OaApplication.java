@@ -1,5 +1,6 @@
 package com.zhongcheng.oa;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,7 +15,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
  * @Version v1.0
  **/
 @SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
-
+@MapperScan("com.zhongcheng.oa.dao")
 public class OaApplication {
 
     public static void main(String[] args) {

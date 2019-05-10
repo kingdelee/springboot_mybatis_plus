@@ -6,9 +6,11 @@ import java.util.List;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.zhongcheng.oa.constant.company_profile.BusRoleEnum;
 import com.zhongcheng.oa.constant.worker_profile.WorkerProfileConstant;
+
 
 public class Worker {
     private Integer id;
@@ -85,16 +87,18 @@ public class Worker {
 
     private Integer isLogin;
 
+    @TableField(exist = false)
     private List<LoginLog> logList;
 
+    @TableField(exist = false)
     private List<BusRole> roleList;
-
+    @TableField(exist = false)
     private String deptName;
-
+    @TableField(exist = false)
     private String positionName;
-
+    @TableField(exist = false)
     private Date loginTime;
-
+    @TableField(exist = false)
     private Integer roleIds;
 
     /**
