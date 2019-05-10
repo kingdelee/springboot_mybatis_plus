@@ -12,6 +12,6 @@ import com.zhongcheng.oa.entity.Worker;
  * @Modified By: Who(When)
  * @Version v1.0
  **/
-public interface WorkerService extends IService<Worker> {
+public interface WorkerService extends SuperService<Worker> {
 
 }
