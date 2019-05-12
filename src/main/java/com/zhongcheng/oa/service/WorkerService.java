@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.zhongcheng.oa.common.service.SuperService;
 import com.zhongcheng.oa.entity.Worker;
 
+import java.util.List;
+
 /**
  * @Title: WorkerService
  * @Description: TODO
@@ -14,4 +16,5 @@ import com.zhongcheng.oa.entity.Worker;
  **/
 public interface WorkerService extends SuperService<Worker> {
 
+    List<Worker> select();
 }

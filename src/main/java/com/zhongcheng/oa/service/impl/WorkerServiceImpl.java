@@ -9,6 +9,8 @@ import com.zhongcheng.oa.dao.WorkerMapper;
 import com.zhongcheng.oa.entity.Worker;
 import com.zhongcheng.oa.service.WorkerService;
 
+import java.util.List;
+
 /**
  * @Title: WorkerServiceImpl
  * @Description: TODO
@@ -20,4 +22,8 @@ import com.zhongcheng.oa.service.WorkerService;
 @Service
 public class WorkerServiceImpl extends SuperServiceImpl<WorkerMapper, Worker> implements WorkerService {
 
+    @Override
+    public List<Worker> select() {
+        return baseMapper.selectList(null);
+    }
 }

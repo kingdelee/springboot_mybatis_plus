@@ -2,6 +2,7 @@ package com.zhongcheng.oa.entity;
 
 import java.util.Date;
 import java.util.List;
+import java.util.StringJoiner;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
@@ -433,5 +434,51 @@ public class Worker {
 
     public void setIsLogin(Integer isLogin) {
         this.isLogin = isLogin;
+    }
+
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Worker.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("name='" + name + "'")
+                .add("phone='" + phone + "'")
+                .add("addr='" + addr + "'")
+                .add("cEmail='" + cEmail + "'")
+                .add("wEmail='" + wEmail + "'")
+                .add("loginName='" + loginName + "'")
+                .add("password='" + password + "'")
+                .add("age=" + age)
+                .add("birthday='" + birthday + "'")
+                .add("deptId=" + deptId)
+                .add("status=" + status)
+                .add("busRoleId=" + busRoleId)
+                .add("correctionTime=" + correctionTime)
+                .add("entryTime=" + entryTime)
+                .add("departureTime=" + departureTime)
+                .add("createTime=" + createTime)
+                .add("updateTime=" + updateTime)
+                .add("createUserId=" + createUserId)
+                .add("updateUserId=" + updateUserId)
+                .add("bank='" + bank + "'")
+                .add("cardNum='" + cardNum + "'")
+                .add("sex=" + sex)
+                .add("positionId=" + positionId)
+                .add("leaderId=" + leaderId)
+                .add("idCardPic='" + idCardPic + "'")
+                .add("leavingCertificatePic='" + leavingCertificatePic + "'")
+                .add("bankRunning='" + bankRunning + "'")
+                .add("diplomaCertificate='" + diplomaCertificate + "'")
+                .add("curriculumVitae='" + curriculumVitae + "'")
+                .add("code='" + code + "'")
+                .add("isDeptManage=" + isDeptManage)
+                .add("isLogin=" + isLogin)
+                .add("logList=" + logList)
+                .add("roleList=" + roleList)
+                .add("deptName='" + deptName + "'")
+                .add("positionName='" + positionName + "'")
+                .add("loginTime=" + loginTime)
+                .add("roleIds=" + roleIds)
+                .toString();
     }
 }

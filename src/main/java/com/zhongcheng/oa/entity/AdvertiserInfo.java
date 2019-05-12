@@ -1,6 +1,7 @@
 package com.zhongcheng.oa.entity;
 
 import java.util.Date;
+import java.util.StringJoiner;
 
 public class AdvertiserInfo {
     private String id;
@@ -141,5 +142,25 @@ public class AdvertiserInfo {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", AdvertiserInfo.class.getSimpleName() + "[", "]")
+                .add("id='" + id + "'")
+                .add("parentId='" + parentId + "'")
+                .add("loginName='" + loginName + "'")
+                .add("password='" + password + "'")
+                .add("phone='" + phone + "'")
+                .add("type=" + type)
+                .add("state=" + state)
+                .add("stateMsg='" + stateMsg + "'")
+                .add("company='" + company + "'")
+                .add("companyLicenseNum='" + companyLicenseNum + "'")
+                .add("companyLicenseImg='" + companyLicenseImg + "'")
+                .add("companyAddress='" + companyAddress + "'")
+                .add("createTime=" + createTime)
+                .add("updateTime=" + updateTime)
+                .toString();
     }
 }
